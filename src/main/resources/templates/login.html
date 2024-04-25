@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="pt-br" >
+<head>
+    <meta charset="UTF-8">
+    <title>Haunted Place</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <img height="75px" width="75px" src="https://github.com/vlopess/HauntedPlaceAPI/blob/main/src/main/resources/static/logohauntedPlace.jpeg?raw=true"/>
+        <h1>Haunted Place</h1>
+        <h2>Login page</h2>
+        <form th:action="@{/login}" method="post">
+            <input type="text" id="username" placeholder="Username or email" name="login" autofocus="autofocus" /> <br/>
+            <input type="password" id="password" placeholder="Password" name="password" /> <br/>
+            <button type="submit"> Log in</button>
+        </form>
+        <h3>Não possue conta? <a href="/register">Criar conta</a> </h3>
+    </div>
+</body>
+</html>

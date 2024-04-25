@@ -1,0 +1,44 @@
+* {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+.page-wrapper {
+    padding: 0;
+    width: 500px;
+    height: 500px;
+    margin: 75px auto;
+    border: #25292d 5px solid;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+input, textarea {
+    background-color: black;
+    border: 3px solid #25292d;
+    color: white;
+    margin: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+button {
+    margin: 10px;
+    background-color: #25292d;
+    color: white;
+}
+
+.page-wrapper img{
+    margin: 0 auto;
+}
+
+.page-wrapper h1 {
+    margin: 25px auto;
+    position: relative;
+    font-size: 45px;
+}
