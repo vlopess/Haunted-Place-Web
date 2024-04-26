@@ -11,4 +11,4 @@
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ![](https://skillicons.dev/icons?i=java,spring,bootstrap)
-
+<img height="50px" src="https://www.thymeleaf.org/images/thymeleaf.png"/>
