@@ -7,21 +7,41 @@
     <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="col align-items-center">
-        <h1 id="welcome" >Welcome to the Haunted Place</h1>
-        <div class="container-register">
-            <div class="col">
-                <img height="75px" width="75px" src="https://github.com/vlopess/HauntedPlaceAPI/blob/main/src/main/resources/static/logohauntedPlace.jpeg?raw=true"/>
-                <h2>Register page</h2>
-                <form th:action="@{/login}" method="post">
+<div class="column">
+    <h1 id="welcome" >Welcome to the Haunted Place</h1>
+    <div class="container-register">
+        <form th:action="@{/register}" method="post">
+            <div class="row justify-content-end">
+                <div class="col-6">
+                    <div class="profileImage"></div>
+                </div>
+                <div class="col-6">
                     <input type="email" id="email" placeholder="Enter email" name="login" autofocus="autofocus" /> <br/>
                     <input type="text" id="username" placeholder="Enter username" name="login" autofocus="autofocus" /> <br/>
                     <input type="password" id="password" placeholder="Enter password" name="password" /> <br/>
+                </div>
+                <div class="col-12">
+                    <textarea type="text"  id="Bio" placeholder="Bio" name="Bio" autofocus="autofocus"></textarea> <br/>
+                </div>
+                <div class="col-12">
+                    <input type="text"  id="localization" placeholder="Localization" name="localization" /> <br/>
+                </div>
+                <div class="col-8">
+                    <label>Tags</label></br>
+                    <span class="badge rounded-pill bg-primary">Primary</span>
+                    <span class="badge rounded-pill bg-secondary">Secondary</span>
+                    <span class="badge rounded-pill bg-light text-dark">Light</span>
+                    <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+                    <span class="badge rounded-pill bg-info text-dark">Info</span>
+                    <span class="badge rounded-pill bg-dark">Dark</span>
+                </div>
+                <div class="col-4">
                     <button type="submit" class="btn btn-dark">Register</button>
-                </form>
-                <p>Já possue conta? <a href="/login" class="badge badge-dark">Entrar</a> </p>
+                    <p><small>Já possue conta? </small><a href="/login" class="badge badge-dark">Entrar</a> </p>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
+</div>
 </body>
 </html>

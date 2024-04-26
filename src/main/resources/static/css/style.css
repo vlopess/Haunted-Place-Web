@@ -18,7 +18,12 @@ body {
     flex-direction: column;
     text-align: center;
 }
-
+.column{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
 .container-register {
     padding: 0;
     width: 700px;
@@ -28,9 +33,18 @@ body {
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+
+.container-register textarea{
+    background-color: black;
+    border: 3px solid #25292d;
+    color: white;
+    margin: 5px;
+    width: 650px;
+    height: 100px;
 }
 
 input, textarea {
@@ -38,8 +52,6 @@ input, textarea {
     border: 3px solid #25292d;
     color: white;
     margin: 5px;
-    width: 250px;
-    height: 30px;
 }
 
 button {
@@ -50,6 +62,15 @@ button {
 
 .container-register, .container-login img{
     margin: 0 auto;
+}
+
+.profileImage {
+    border: #1e1e1e 5px solid;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin: 0 auto;
+    align-content: start;
 }
 
 
