@@ -10,5 +10,5 @@
 
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-![](https://skillicons.dev/icons?i=java,spring)
+![](https://skillicons.dev/icons?i=java,spring,bootstrap)
 
