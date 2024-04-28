@@ -7,16 +7,20 @@
     <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container-login">
-        <img height="75px" width="75px" src="https://github.com/vlopess/HauntedPlaceAPI/blob/main/src/main/resources/static/logohauntedPlace.jpeg?raw=true"/>
-        <h1>Haunted Place</h1>
-        <h2>Login page</h2>
-        <form th:action="@{/login}" method="post">
-            <input type="text" id="username" placeholder="Username or email" name="login" autofocus="autofocus" /> <br/>
-            <input type="password" id="password" placeholder="Password" name="password" /> <br/>
-            <button type="submit" class="btn btn-dark">Log in</button>
-        </form>
-        <p>Não possue conta? <a href="/register" class="badge badge-dark">Criar conta</a> </p>
+    <div class="column">
+        <div th:if="${message != null}" class="alert alert-danger" role="alert">
+            [[${message}]]
+        </div>
+        <div class="container-login">
+            <img alt="logoHauntedPlace" height="100px" width="100px" src="https://github.com/vlopess/HauntedPlaceAPI/blob/main/src/main/resources/static/logohauntedPlace.jpeg?raw=true"/>
+            <h1>Haunted Place</h1>
+            <form th:action="@{/login}" method="post">
+                <label for="username"></label><input type="text" id="username" placeholder="Username or email" name="login" autofocus="autofocus" /> <br/>
+                <label for="password"></label><input type="password" id="password" placeholder="Password" name="password" /> <br/>
+                <button type="submit" class="btn btn-dark">Log in</button>
+            </form>
+            <a href="/register" class="badge badge-dark">Criar Conta</a>
+        </div>
     </div>
 </body>
 </html>
