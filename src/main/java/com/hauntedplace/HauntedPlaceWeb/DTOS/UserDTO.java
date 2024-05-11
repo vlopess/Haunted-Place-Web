@@ -9,12 +9,20 @@ import com.hauntedplace.HauntedPlaceWeb.Models.Enums.TagEnum;
 import com.hauntedplace.HauntedPlaceWeb.Models.Post;
 import com.hauntedplace.HauntedPlaceWeb.Models.Tag;
 import com.hauntedplace.HauntedPlaceWeb.Models.UserSocialMedia;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.web.multipart.MultipartFile;
 
 
 public class UserDTO {
     private Long id;
+    @NotBlank
     private String username;
+    @Email
     private String email;
+    @NotNull
     private String password;
     private String profilePictureUrl;
     private MultipartFile profilePicture;
