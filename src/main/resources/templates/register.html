@@ -8,52 +8,60 @@
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
-<div class="column">
-    <h1>Welcome To The Haunted Place</h1>
-    <form th:action="@{/register}" method="post">
-        <div class="container-register">
-            <div class="row">
-                <div class="col-4">
-                    <label>
-                        <input type="file" accept=".png,.jpeg,.jpg" class="profileImage" id="profileImage" onChange="img_pathUrl(this);"/>
-                    </label>
-                </div>
-                <div class="col-8 align-self-center">
-                    <label for="email"></label><input type="email" id="email" placeholder="Enter email" name="login" autofocus="autofocus" />
-                    <label for="username"></label><input type="text" id="username" placeholder="Enter username" name="login" autofocus="autofocus" />
-                    <label for="password"></label><input type="password" id="password" placeholder="Enter password" name="password"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label for="Bio"></label><textarea type="text" id="Bio" placeholder="Bio" name="Bio" autofocus="autofocus"></textarea> <br/>
-                </div>
-                <div class="col-md-12">
-                    <label for="localization"></label><textarea type="text" id="localization" placeholder="Localization" name="localization" autofocus="autofocus" style="height: 35px"></textarea> <br/>
-                </div>
-                <div class="col-md-8">
-                    <label>Tags</label>
-                    <div class="container">
-                        <div><label><input type="checkbox" name="Movies"/><span>Movies</span></label></div>
-                        <div><label><input type="checkbox" name="Style"/><span>Style</span></label></div>
-                        <div><label><input type="checkbox" name="Literature"/><span>Literature</span></label></div>
-                        <div><label><input type="checkbox" name="Music"/><span>Music</span></label></div>
+    <div class="column">
+        <h1>Welcome To The Haunted Place</h1>
+        <div th:if="${message != null}" class="alert alert-danger" role="alert">
+            [[${message}]]
+        </div>
+        <form th:action="@{/register}" th:object="${newUser}" method="post" enctype="multipart/form-data">
+            <div class="container-register">
+                <div class="row">
+                    <div class="col-4">
+                        <label>
+                            <input type="file" accept=".png,.jpeg,.jpg" class="profileImageRegister" id="profileImage" onChange="img_pathUrl(this);" th:field="*{profilePicture}"/>
+                        </label>
+                    </div>
+                    <div class="col-8 align-self-center">
+                        <label for="email"></label><input type="email" id="email" placeholder="Enter email" name="login" autofocus="autofocus" th:field="*{email}"/>
+                        <label for="username"></label><input type="text" id="username" placeholder="Enter username" name="login" autofocus="autofocus" th:field="*{username}"/>
+                        <label for="password"></label><input type="password" id="password" placeholder="Enter password" name="password" th:field="*{password}"/>
                     </div>
                 </div>
-                <div class="col-4">
-                    <button type="submit" class="btn btn-dark">Register</button>
-                    <p><small>Já Possue Conta? </small><a href="/login" class="badge badge-dark">Entrar</a> </p>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="Bio"></label><textarea type="text" id="Bio" placeholder="Bio" name="Bio" autofocus="autofocus" th:field="*{bio}"></textarea> <br/>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="localization"></label><textarea type="text" id="localization" placeholder="Localization" name="localization" autofocus="autofocus" style="height: 35px" th:field="*{localization}"></textarea> <br/>
+                    </div>
+                    <div class="col-md-8">
+                        <label>Tags</label>
+                        <div class="container">
+                            <div th:each="tag : ${tags}">
+                                <label><input type="checkbox" th:name="'tags'" th:value="${tag.description}"/><span th:text="${tag.description}"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-dark">Register</button>
+                        <p><small>Já Possue Conta? </small><a href="/login" class="badge badge-dark">Entrar</a> </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </body>
 </html>
 
 <script>
     function img_pathUrl(input){
-        let url = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
-        $('#profileImage').prop("background-image", url);
+        const reader = new FileReader();
+        reader.onload = readImage;
+        reader.readAsDataURL(input.files[0]);
+    }
+    function readImage(e) {
+        let profileUrl = e.target.result;
+        $("#profileImage").css('background-image', "url(" + profileUrl + ")");
+        $("#profileImage").css('background-size', "150px 150px");
     }
 </script>
