@@ -12,7 +12,7 @@
             [[${message}]]
         </div>
         <div class="container-login">
-            <img alt="logoHauntedPlace" height="100px" width="100px" src="https://github.com/vlopess/HauntedPlaceAPI/blob/main/src/main/resources/static/logohauntedPlace.jpeg?raw=true"/>
+            <img alt="logoHauntedPlace" height="100px" width="100px" th:src="@{/images/logohauntedPlace.jpeg}"/>
             <h1>Haunted Place</h1>
             <form th:action="@{/login}" method="post">
                 <label for="username"></label><input type="text" id="username" placeholder="Username or email" name="login" autofocus="autofocus" /> <br/>
