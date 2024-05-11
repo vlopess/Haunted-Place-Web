@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import com.hauntedplace.HauntedPlaceWeb.Models.Enums.TagEnum;
 import com.hauntedplace.HauntedPlaceWeb.Models.Post;
 import com.hauntedplace.HauntedPlaceWeb.Models.Tag;
 import com.hauntedplace.HauntedPlaceWeb.Models.UserSocialMedia;
@@ -16,13 +17,13 @@ public class UserDTO {
     private String email;
     private String password;
     private String profilePictureUrl;
+    private MultipartFile profilePicture;
     private String bio;
     private String localization;
     private List<Tag> tags = new ArrayList<>();
     private List<Post> posts = new ArrayList<>();
     private List<UserSocialMedia> socialMedias = new ArrayList<>();
 
-    public UserDTO(){}
 
 
     public Long getId() {
@@ -48,8 +49,9 @@ public class UserDTO {
         return this.tags;
     }
 
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
+
+    public void setTags(List<TagEnum> tagsEnum) {
+        this.tags = tagsEnum.stream().map(Tag::new).toList();
     }
 
     public void addTag(Tag tag) {
@@ -62,6 +64,13 @@ public class UserDTO {
 
     public void setProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
+    }
+
+    public MultipartFile getProfilePicture() {
+        return profilePicture;
+    }
+    public void setProfilePicture(MultipartFile profilePicture) {
+        this.profilePicture = profilePicture;
     }
     public String getBio() {
         return bio;
