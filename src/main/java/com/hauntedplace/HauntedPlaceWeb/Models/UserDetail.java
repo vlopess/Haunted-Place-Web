@@ -15,7 +15,7 @@ public class UserDetail {
     private String bio;
     private String localization;
     private Boolean isFollowed;
-    private List<TagEnum> tags = new ArrayList<TagEnum>();
+    private List<Tag> tags = new ArrayList<>();
     private List<PostDTO> posts = new ArrayList<>();
     private List<UserOverView> followers = new ArrayList<>();
     private List<UserOverView> following = new ArrayList<>();
@@ -42,15 +42,15 @@ public class UserDetail {
         this.email = email;
     }
 
-    public List<TagEnum> getTags() {
+    public List<Tag> getTags() {
         return this.tags;
     }
 
-    public void setTags(List<TagEnum> tags) {
+    public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 
-    public void addTag(TagEnum tag) {
+    public void addTag(Tag tag) {
         this.tags.add(tag);
     }
 
