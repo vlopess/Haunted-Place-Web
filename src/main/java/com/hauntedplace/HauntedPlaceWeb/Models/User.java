@@ -1,5 +1,7 @@
 package com.hauntedplace.HauntedPlaceWeb.Models;
 
+import com.hauntedplace.HauntedPlaceWeb.Models.Enums.TagEnum;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +13,7 @@ public class User  {
     private String profilePictureUrl;
     private String bio;
     private String localization;
-    private List<Tag> tags = new ArrayList<>();
+    private List<TagEnum> tags = new ArrayList<>();
     private List<Post> posts = new ArrayList<>();
     private List<User> following = new ArrayList<>();
     private List<User> followers = new ArrayList<>();
@@ -33,6 +35,9 @@ public class User  {
     public void setId(Long id) {
         this.id = id;
     }
+    public String getUsername() {
+        return username;
+    }
     public void setUsername(String username){
         this.username = username;
     }
@@ -43,15 +48,15 @@ public class User  {
         this.email = email;
     }
 
-    public List<Tag> getTags() {
+    public List<TagEnum> getTags() {
         return this.tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(List<TagEnum> tags) {
         this.tags = tags;
     }
 
-    public void addTag(Tag tag) {
+    public void addTag(TagEnum tag) {
         this.tags.add(tag);
     }
 
