@@ -65,4 +65,35 @@ public class LoginController {
         }
         return "register";
     }
+
+    @PostMapping("/register")
+    public String addUser(Model model, @Valid UserDTO user, @RequestParam(name = "tags") List<TagEnum> selectedTags, HttpServletRequest request) {
+        String message = "";
+        try{
+            user.setTags(selectedTags);
+            var httpService = new HttpService();
+            if(user.getProfilePicture() != null){
+                var filePath = httpService.postFile("http://localhost:8080/user/files/upload", user.getProfilePicture(), StringWrapper.class, null);
+                if(filePath != null) {
+                    user.setProfilePictureUrl(filePath.getValue());
+                    user.setProfilePicture(null);
+                }
+            }
+            var result = httpService.post("http://localhost:8080/user/register", user, StringWrapper.class, null);
+            if(result == null) throw new Exception("Error while adding user");
+            return makeLogin(model, user.getEmail(), user.getPassword(), request);
+        }catch (Exception e){
+            message = "Username has already been used";
+            model.addAttribute("message", message);
+            return register(model);
+        }
+    }
+
+    private File convertToFile(MultipartFile multipartFile, String fileName) throws IOException {
+        File tempFile = new File(fileName);
+        try (FileOutputStream fos = new FileOutputStream(tempFile)) {
+            fos.write(multipartFile.getBytes());
+        }
+        return tempFile;
+    }
 }
