@@ -84,6 +84,44 @@ body {
     transition: 0.5s;
     user-select: none;
     overflow: hidden;
+    font-size: 12px;
+}
+
+.container-profileHome {
+    width: 300px;
+    height: 800px;
+    border: #25292d 5px solid;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profileImage {
+    border: #25292d 5px solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 15px auto;
+}
+
+.container-feed {
+    width: 800px;
+    height: 800px;
+    border: #25292d 5px solid;
+}
+
+.container-chat {
+    width: 300px;
+    height: 800px;
+    border: #25292d 5px solid;
+    border-radius: 0 25px 25px 0;
+}
+
+.title-home{
+    display: inline-block;
 }
 
 input, textarea {
@@ -110,7 +148,7 @@ button {
     margin: 0 auto;
 }
 
-.profileImage {
+.profileImageRegister {
     border: #25292d 5px solid;
     width: 150px;
     height: 150px;
