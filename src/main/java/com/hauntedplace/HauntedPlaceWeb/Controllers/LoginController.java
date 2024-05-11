@@ -51,12 +51,18 @@ public class LoginController {
         request.getSession().setAttribute("USER_ID", new String(new Base64().encode(result.userID().toString().getBytes())));
         return "redirect:/home";
     }
-    @GetMapping("/home")
-    public String home() {
-        return "home";
-    }
-    @GetMapping("/register")
-    public String register() {
+
+    @GetMapping(value = "/register")
+    public String register(Model model) {
+        model.addAttribute("newUser", new UserDTO());
+
+        var httpService = new HttpService();
+
+        var response = Arrays.stream(httpService.get("http://localhost:8080/tags", Tag[].class, null)).toList();
+        if(!response.isEmpty()) {
+            List<Tag> tags = List.of(response.toArray(new Tag[0]));
+            model.addAttribute("tags", tags);
+        }
         return "register";
     }
 }
