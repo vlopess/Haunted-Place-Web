@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="pt-br" >
+<head>
+    <meta charset="UTF-8">
+    <title>Haunted Place</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="col" >
+        <div class="container-profileHome">
+            <img th:src="*{user.profilePictureUrl}" class="profileImage" alt="profilePicture"/>
+            <p th:text="*{user.username}"></p>
+            <p th:text="*{user.bio}"></p>
+            <p th:text="*{user.localization}"></p>
+        </div>
+    </div>
+    <div class="col">
+        <div class="container-feed"></div>
+    </div>
+    <div class="col">
+        <div class="container-chat"></div>
+    </div>
+</div>
+</body>
+</html>
