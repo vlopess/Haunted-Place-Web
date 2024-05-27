@@ -3,12 +3,8 @@
 <h1>Haunted Place Web</h1>
 </div>
 
-
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
-
-## Tecnologias utilizadas
 
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-![](https://skillicons.dev/icons?i=java,spring,bootstrap)
-<img height="50px" src="https://www.thymeleaf.org/images/thymeleaf.png"/>
+![](https://skillicons.dev/icons?i=angular)
