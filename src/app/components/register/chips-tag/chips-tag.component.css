@@ -1,4 +1,24 @@
 .example-chip-list {
-  width: 100%;
-  margin: 5px;
+  width: 90%;
+  border: #25292d 3px solid;
+  border-radius: 15px;
+  padding-top: 15px;
 }
+
+mat-chip-row {
+  color: #25292d;
+}
+
+mat-chip-row p {
+  color: white;
+  margin: 0 auto;
+}
+
+mat-icon{
+  color: #25292d;
+}
+
+
+
+
+
