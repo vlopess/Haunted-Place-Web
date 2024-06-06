@@ -1,0 +1,16 @@
+.container-login {
+    padding: 0;
+    width: 500px;
+    height: 500px;
+    margin: 25px auto;
+    border: #25292d 5px solid;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.container-login input{
+    width: 60%;
+}
