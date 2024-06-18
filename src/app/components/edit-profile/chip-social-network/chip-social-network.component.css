@@ -1,0 +1,55 @@
+mat-chip-set{
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.LastFmChip{
+    background: #BA0000 !important;
+}
+
+.LetterboxdChip{
+    background: #14181c !important;
+}
+
+.SiteChip{
+    background: #25292d !important;
+}
+
+.InstagramChip{
+    background: linear-gradient(45deg, #405de6,#5851db, #833ab4, #c13584, #e1306c, #fd1d1d) !important;
+}
+
+.YouTubeChip{
+    background: radial-gradient(circle, rgba(255,0,0,1) 50%, rgba(255,120,120,1) 100%) !important;
+}
+
+
+mat-chip-row a{
+    color: white;
+    margin: 0 auto;
+}
+.btn-dark{
+    margin: 7px 0 0 7px;
+    padding: 0 5px;
+    height: 25px;
+    color: white;
+}
+
+mat-chip-row {
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 20px;
+    background: radial-gradient(circle, rgba(0,35,201,1) 0%, rgba(17,11,40,1) 100%) !important;
+    border-color: transparent;
+    color: transparent;
+}
+
+mat-icon{
+    color: white;
+    margin: -7px;
+}
+
+
+
