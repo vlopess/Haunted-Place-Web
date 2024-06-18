@@ -50,6 +50,10 @@ body {
   display: inline-block;
 }
 
+::placeholder {
+  color: white;
+}
+
 input, textarea {
   resize: none;
   background-color: #09090b;
@@ -71,7 +75,7 @@ button {
   color: white;
 }
 
-.container-register, .container-login img{
+.container-register, .container-editProfile ,.container-login img{
   margin: 0 auto;
 }
 
@@ -99,5 +103,46 @@ a:hover {
   color: #25292d;
 }
 
+.nanum-gothic-coding-regular {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface {
+  background-color: #09090b !important;
+  border-radius: 15px;
+}
+
+.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface h2{
+  color: white;
+}
+
+.mdc-dialog__actions{
+  justify-content: space-around !important;
+}
+
+.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__container {
+  border-radius: 15px;
+  border: 3px solid #25292d;
+  color: white;
+}
+
+
+mat-dialog-container {
+  position: fixed !important;
+  top: 80% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.mat-mdc-dialog-container, .mat-mdc-dialog-container .mdc-dialog__container, .mat-mdc-dialog-container .mdc-dialog__surface {
+  height: 320px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Nanum Gothic Coding, "Helvetica Neue", monospace; }
+
