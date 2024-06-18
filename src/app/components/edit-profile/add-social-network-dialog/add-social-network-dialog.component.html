@@ -1,0 +1,23 @@
+<div @dialogAnimation>
+    <h2 mat-dialog-title>Add Social Network</h2>
+    <form [formGroup]="form">
+        <mat-dialog-content>
+            <select required class="form-select form-select-md mb-3" aria-label=".form-select-lg example" formControlName="socialNetwork">
+                <option value="0" selected>Select the social network</option>
+                <option value="Letterboxd">Letterboxd</option>
+                <option value="LastFm">LastFm</option>
+                <option value="YouTube">YouTube</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Site">Site</option>
+                <option value="Outro">Outro</option>
+            </select>
+            <label for="link"></label><input required style="width: 100%; margin: auto; color: white" type="text" id="link" placeholder="Link" name="Link" autofocus="autofocus" formControlName="socialNetworkLink"/>
+            <label for="otherDescription"></label><input *ngIf="showOtherInput()"  required style="width: 100%; margin: 10px 0 0 0; color: white" type="text" id="otherDescription" placeholder="Enter Other" name="otherDescription" autofocus="autofocus" formControlName="otherDescription"/>
+        </mat-dialog-content>
+    </form>
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close (click)="close()">Fechar</button>
+        <button mat-raised-button mat-dialog-close (click)="save()">Salvar</button>
+    </mat-dialog-actions>
+</div>
+
