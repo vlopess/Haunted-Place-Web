@@ -1,0 +1,54 @@
+<div class="column">
+    <div class="search">
+        <a routerLink="/home">
+            <img class="logo ins" alt="logoHauntedPlace" src="../../../assets/images/logohauntedPlace.jpeg" />
+        </a>
+    </div>
+    <mat-tab-group class="custom-tab-group">
+        <mat-tab class='tab' label="Profile">
+            <form action=""  method="post" enctype="multipart/form-data">
+                <div class="container-editProfile">
+                    <div class="row align-items-center g-0">
+                        <div class="col-12 col-lg-4 col-md-4 col-sm-8 p-0">
+                            <label>
+                                <input type="file" accept=".png,.jpeg,.jpg" class="profileImageEdit" id="profileImage" (change)="img_pathUrl($event);"/>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-8 col-md-12 col-sm-12 p-0">
+                            <label for="Bio"></label><textarea type="text" id="Bio" placeholder="Bio" name="Bio" autofocus="autofocus" ></textarea> <br/>
+                            <label for="localization"></label><input type="text" id="localization" placeholder="Localization" name="localization" autofocus="autofocus"/> <br/>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label>Tags</label><br>
+                        <app-chips-tag></app-chips-tag>
+                    </div>
+                    <div class="col-md-12">
+                        <br>
+                        <label>Social Networks</label><br>
+                        <chip-social-network></chip-social-network>
+                    </div>
+                    <div class="col align-self-end">
+                        <button type="submit" class="btn btn-dark">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </mat-tab>
+        <mat-tab class='tab' label="Auth">
+            <form action=""  method="post" enctype="multipart/form-data">
+                <div class="container-editProfile">
+                    <div class="col-12 col-lg-8 col-md-12 col-sm-12 align-self-center">
+                        <h3>Change password</h3>
+                        <label for="currentPassword"></label><input type="password" id="currentPassword" placeholder="Current password" name="currentPassword" />
+                        <label for="newPassword"></label><input type="password" id="newPassword" placeholder="New password" name="newPassword" />
+                        <label for="ConfirmNewPassword"></label><input type="password" id="ConfirmNewPassword" placeholder="Confirm new password" name="ConfirmNewPassword" />
+                        <div class="col">
+                            <button type="submit" class="btn btn-dark">Change</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+

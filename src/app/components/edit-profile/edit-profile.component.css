@@ -1,0 +1,103 @@
+.mat-mdc-tab-list span{
+    margin-bottom: 10px;
+}
+.mat-mdc-form-field-subscript-wrapper, .mat-mdc-form-field-bottom-align::before {
+    height: 0 !important;
+}
+
+.mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input, .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+    color: white;
+}
+
+.mdc-tab__text-label{
+    color: white !important;
+}
+
+._mat-animation-noopable{
+    background-color: transparent;
+}
+
+.mdc-line-ripple{
+    width: 0;
+}
+
+.mdc-line-ripple::before, .mdc-line-ripple::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0 !important;
+    border-bottom-style: solid;
+    content: "";
+}
+
+h3{
+    color: white;
+}
+.search {
+    background-color: #25292d;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+}
+
+.search .search-icon {
+    width: 30px;
+    padding: 5px;
+}
+
+.search .logo{
+    width: 50px;
+    padding: 5px;
+    border-radius: 25%;
+}
+.search .row {
+    display: flex;
+}
+
+.container-editProfile {
+    background-color: #09090b;
+    height: 70%;
+    min-height: 500px;
+    min-width: 612px;
+    max-width: 612px;
+    border: #25292d 5px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.align-self-center {
+    align-self: center !important;
+    margin: auto;
+}
+
+.align-items-center{
+    margin: 10px;
+}
+
+.form-select{
+    background-color: #09090b;
+    border: 3px solid #25292d;
+    color: white;
+}
+.form-select:focus {
+    border-color: #25292d;
+    box-shadow: none;
+}
+
+.container-editProfile textarea {
+    background-color: #09090b;
+    border: 3px solid #25292d;
+    color: white;
+}
+
+.profileImageEdit {
+    border: #25292d 5px solid;
+    border-radius: 50%;
+    background-image: url("https://icons.veryicon.com/png/o/commerce-shopping/dream-icon-library/camera_add.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30% 30%;
+    margin: 15px;
+    padding: 75% 0 0 75%;
+}
