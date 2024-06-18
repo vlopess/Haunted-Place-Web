@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from "./components/login/login.component";
 import {HomeComponent} from "./components/home/home.component";
 import {RegisterComponent} from "./components/register/register.component";
+import {EditProfileComponent} from "./components/edit-profile/edit-profile.component";
+import {ProfileComponent} from "./components/profile/profile.component";
 
 const routes: Routes = [
   {
@@ -18,8 +20,16 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'editProfile',
+    component: EditProfileComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'profile',
     pathMatch: 'full'
   },
 ];
