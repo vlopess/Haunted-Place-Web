@@ -1,7 +1,7 @@
-.example-chip-list {
+.chip-list {
   width: 90%;
   border: #25292d 3px solid;
-  border-radius: 15px;
+  border-radius: 5px;
   padding-top: 15px;
 }
 
@@ -13,11 +13,6 @@ mat-chip-row p {
   color: white;
   margin: 0 auto;
 }
-
-mat-icon{
-  color: #25292d;
-}
-
 
 
 
