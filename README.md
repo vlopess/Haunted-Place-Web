@@ -11,11 +11,12 @@
 
 |     Pages      |                                                Status                                                |     Result     |
 |:--------------:|:----------------------------------------------------------------------------------------------------:|:--------------:|
-|    `Login`     |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 |    `Login`     |   
-|   `Register`   |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 |   `Register`   |
+|    `Login`     |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 |   <img align="center" src="https://github.com/vlopess/Haunted-Place-Web/blob/main/screenshots/login_page.png"/>    |   
+|   `Register`   |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 |   <img align="center" src="https://github.com/vlopess/Haunted-Place-Web/blob/main/screenshots/register_page.png"/>  |
 |     `Home`     | <p style="color: white; background:darkblue; border-radius: 20px;width:150px;">Em Desenvolvimento<p> |     `Home`     |
 |   `Profile`    | <p style="color: white; background:darkblue; border-radius: 20px;width:150px;">Em Desenvolvimento<p> |   `Profile`    |
-| `Edit Profile` |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 | `Edit Profile` |
+| `Edit Profile` |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 | <img align="center" src="https://github.com/vlopess/Haunted-Place-Web/blob/main/screenshots/edit_profile.png"/>|
+| `Edit Profile` |                <p style="background:green; border-radius: 20px; width:50px;">Done<p>                 | <img align="center" src="https://github.com/vlopess/Haunted-Place-Web/blob/main/screenshots/edit_profile_auth.png"/>|
 
 
 
